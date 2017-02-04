@@ -37,7 +37,7 @@ public class GameManagerUI : MonoBehaviour
     /// </summary>
     private void OnGUI()
     {
-        ShowPlayerLife();
+        //ShowPlayerLife();
         ShowWarningLowLife();
     }
 
