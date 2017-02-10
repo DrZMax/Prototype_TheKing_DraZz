@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d6bfa2da5fb344b45887fb592f53810e
+timeCreated: 1486323279
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Chelsea Alternates
+  fontNames:
+  - Chelsea Alternates
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

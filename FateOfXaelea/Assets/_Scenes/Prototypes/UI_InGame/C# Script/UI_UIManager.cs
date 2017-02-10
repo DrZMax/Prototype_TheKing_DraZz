@@ -45,24 +45,24 @@ public class UI_UIManager : MonoBehaviour {
     /// </summary>
     private void createHeatsOnScreen()
     {
-        if (_arrHeartsObj != null)
+        // On supprime les coeurs qui y sont déjà présent.
+        int nbHearts = PanelHearts.transform.childCount;
+        for (int ind = 0; ind < nbHearts; ind++)
         {
-            foreach (GameObject obj in _arrHeartsObj)
-            {
-                Destroy(obj);
-            }
-        }        
+            Destroy(PanelHearts.transform.GetChild(ind).gameObject);
+        }
+           
 
-        int espLeft = 25;
-        int espTop = 20;
-        int espX = 5;
-        int espY = 5;
+        int espLeft = 45;
+        int espTop = 40;
+        int espX = 10;
+        int espY = 10;
 
-        int width = (int)((RectTransform)HeartPrefab.transform).rect.width;
-        int height = (int)((RectTransform)HeartPrefab.transform).rect.height;
+        int width = 48;
+        int height = 48;
 
         List<GameObject> lstHearts = new List<GameObject>();
-        int nbCoueurAAfficher = _gameManager.MaxPlayerLife;
+        int nbCoueurAAfficher = _gameManager.MaxPlayerLife / 10;
         int nbCoeurParRange = UI_GameManager.NUMBER_MAX_HEARTS_EVER / 2;
         for (int ind = 1; ind <= nbCoueurAAfficher; ind++)
         {
@@ -94,29 +94,26 @@ public class UI_UIManager : MonoBehaviour {
 
             // Étape 1 - On détermine quel coeur on veut affiché. Le coeur vide est à gauche et ça devrait se remplir jusqu'à être complet à droite.
             int posIconInTexture = 0;
-            float rest = (float)_gameManager.CurrentPlayerLife - (int)_gameManager.CurrentPlayerLife;
+            int nbFullLife = _gameManager.CurrentPlayerLife / 10;
+            int nbRest = _gameManager.CurrentPlayerLife - (nbFullLife * 10);
 
-            if (indHeart <= (int)_gameManager.CurrentPlayerLife)
+            if (indHeart <= nbFullLife)
             {
                 // C'est sûr que c'est un coeur plein.
                 posIconInTexture = UI_GameManager.NUMBER_HEART_PARTS;
             }
-            else if (indHeart > (int)_gameManager.CurrentPlayerLife + 1)
+            else if (indHeart > (nbFullLife + (nbRest > 0 ? 1 : 0)))
             {
                 // C'est sûr que c'est un coeur vide.
                 posIconInTexture = 0;
             }
             else
             {
-                // On va avoir un coeur incomplet, ou même vide. On va aller chercher le reste et multiplier par le nombre de parties (Heart piece).
-                // Ex. On veut afficher le 3e coeur. _currentLife est à 2.4.
-                //     0.4 * 5 = 2   C'est la 3e image (On commence à 0) dans la texture.
-                //posIconInTexture = (int)(rest * UI_GameManager.NUMBER_HEART_PARTS);
-                posIconInTexture = Mathf.RoundToInt(rest * UI_GameManager.NUMBER_HEART_PARTS);
+                posIconInTexture = (int)(nbRest / 10.0f * UI_GameManager.NUMBER_HEART_PARTS);
             }
 
             heart.GetComponent<Image>().sprite = HeartsSprites[posIconInTexture];
-            heart.GetComponent<Animator>().SetBool("IsCurrentHeart", indHeart == ((int)_gameManager.CurrentPlayerLife + (rest == 0 ? 0 : 1)));
+            heart.GetComponent<Animator>().SetBool("IsCurrentHeart", indHeart == (nbFullLife + (nbRest > 0 ? 1 : 0)));
         }
     }
 
@@ -127,15 +124,24 @@ public class UI_UIManager : MonoBehaviour {
     private void ShowDangerUI()
     {
         Animator anmDanger = PanelDanger.GetComponent<Animator>();
-        float rateHighDanger = _gameManager.MaxPlayerLife * 0.08f;  // < 8%
-        float rateLowDanger = _gameManager.MaxPlayerLife * 0.20f;   // < 20%
+        float rateHighDanger = _gameManager.MaxPlayerLife * 0.12f;  // < 12%
+        float rateLowDanger = _gameManager.MaxPlayerLife * 0.25f;   // < 25%
 
         if (_gameManager.CurrentPlayerLife <= rateHighDanger)
+        {
             anmDanger.SetInteger("EtatDanger", 2);  // Grand danger, on va afficher l'animation rapide.
+            _arrHeartsObj[0].GetComponent<Animator>().speed = 1.8f;
+        }            
         else if (_gameManager.CurrentPlayerLife <= rateLowDanger)
+        {
             anmDanger.SetInteger("EtatDanger", 1);  // il y a danger, on va afficher l'animation lente.
+            _arrHeartsObj[0].GetComponent<Animator>().speed = 1.0f;
+        }            
         else
+        {
             anmDanger.SetInteger("EtatDanger", 0);  // état idle.
+            _arrHeartsObj[0].GetComponent<Animator>().speed = 1.0f;
+        }            
     }
 
     #region Debug
@@ -145,8 +151,8 @@ public class UI_UIManager : MonoBehaviour {
     /// </summary>
     private void UpdateUIDebug()
     {
-        float currentPlayerLife = _gameManager.CurrentPlayerLife;
-        int maxPlayerLife = _gameManager.MaxPlayerLife;
+        float currentPlayerLife = (_gameManager.CurrentPlayerLife / 10.0f);
+        int maxPlayerLife = (_gameManager.MaxPlayerLife / 10);
         int maxLifeEver = UI_GameManager.NUMBER_MAX_HEARTS_EVER;
 
         LblCurrentLife.text = currentPlayerLife.ToString("0.0");

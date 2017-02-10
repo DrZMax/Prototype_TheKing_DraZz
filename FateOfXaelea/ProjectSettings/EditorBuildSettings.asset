@@ -34,16 +34,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Prototypes/MainGame_TakeThrowObj.unity
   - enabled: 1
-    path: Assets/_Scenes/Prototypes/Menu_ItemsAndEquip.unity
+    path: Assets/_Scenes/Prototypes/UI_Menu/UI_Menu.unity
   - enabled: 1
-    path: Assets/_Scenes/Prototypes/Menu_Map.unity
-  - enabled: 1
-    path: Assets/_Scenes/Prototypes/Menu_SwitchItem.unity
+    path: Assets/_Scenes/Prototypes/UI_MenuSwitchItem/UI_MenuSwitchItem.unity
   - enabled: 1
     path: Assets/_Scenes/Prototypes/UI_Dialog.unity
   - enabled: 1
     path: Assets/_Scenes/Prototypes/UI_FindSomething.unity
   - enabled: 1
-    path: Assets/_Scenes/Prototypes/UI_InGame.unity
-  - enabled: 1
     path: Assets/_Scenes/Prototypes/UI_NewItem.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/UI_InGame/UI_InGame.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Mat)/Test 1/Test_Mat1.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Mat)/Test 2/Test_Mat2.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Mat)/Test 3/Test_Mat3.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Mat)/Test 4/Test_Mat4.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Max)/Test 1/Test_Max1.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Max)/Test 2/Test_Max2.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Max)/Test 3/Test_Max3.unity
+  - enabled: 1
+    path: Assets/_Scenes/Prototypes/_Tests (Max)/Test 4/Test_Max4.unity
