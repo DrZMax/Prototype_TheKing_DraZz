@@ -377,7 +377,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1001 &2128232518
+--- !u!1001 &1512407262
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -386,11 +386,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4753302075231658, guid: 557c3713657552d4b97c052af122ec12, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -29.16
+      value: -23.4
       objectReference: {fileID: 0}
     - target: {fileID: 4753302075231658, guid: 557c3713657552d4b97c052af122ec12, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 48.03
+      value: 43.8
       objectReference: {fileID: 0}
     - target: {fileID: 4753302075231658, guid: 557c3713657552d4b97c052af122ec12, type: 2}
       propertyPath: m_LocalPosition.z
@@ -415,6 +415,10 @@ Prefab:
     - target: {fileID: 4753302075231658, guid: 557c3713657552d4b97c052af122ec12, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174399772655964, guid: 557c3713657552d4b97c052af122ec12, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 557c3713657552d4b97c052af122ec12, type: 2}

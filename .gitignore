@@ -36,8 +36,6 @@ sysinfo.txt
 #
 **/Library/*
 **/Temp/*
-**/Assets/Tiled2Unity/*
-**/Assets/Tiled2Unity
 **/Assets/AssetStoreTools*
 **/*.csproj
 **/*.unityproj
@@ -47,4 +45,4 @@ sysinfo.txt
 
 # include meta files
 !*.*.meta
-FateOfXaelea/Assets/Tiled2Unity.meta
+
