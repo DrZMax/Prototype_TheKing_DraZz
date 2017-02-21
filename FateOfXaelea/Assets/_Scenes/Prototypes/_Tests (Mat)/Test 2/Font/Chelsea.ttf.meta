@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 755fba17f1295da4bbd80e9f9b561d20
+timeCreated: 1486323279
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Chelsea
+  fontNames:
+  - Chelsea
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 47649597456553e4fbf67f50b599aed5, type: 3}
+  - {fileID: 12800000, guid: 340f9f2a1530dbc42a034d83874288f2, type: 3}
+  - {fileID: 12800000, guid: a1a084fc7bfe06e45955eedf4f014fc1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

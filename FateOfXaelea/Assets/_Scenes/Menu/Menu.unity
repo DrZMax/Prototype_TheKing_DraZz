@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 415091112}
   - component: {fileID: 415091111}
   m_Layer: 5
-  m_Name: btnTestMat2
+  m_Name: btnTestMat2_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1012,8 +1012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Test_Mat2
-  Title: Test (Mat) - 2
-  Description: "Test 2 - \xC0 d\xE9velopper..."
+  Title: Test (Mat) 2 -> Menu
+  Description: Menu in game
 --- !u!114 &415091112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1829,7 +1829,7 @@ GameObject:
   - component: {fileID: 783210019}
   - component: {fileID: 783210018}
   m_Layer: 5
-  m_Name: btnTestMat1
+  m_Name: btnTestMat1_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,8 +1865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Test_Mat1
-  Title: Test (Mat) - 1
-  Description: "Test 1 - \xC0 d\xE9velopper..."
+  Title: Test (Mat) 1 -> UI
+  Description: UI - Basic
 --- !u!114 &783210019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5561,7 +5561,7 @@ GameObject:
   - component: {fileID: 2109911126}
   - component: {fileID: 2109911125}
   m_Layer: 5
-  m_Name: btnTestMat3
+  m_Name: btnTestMat3_SwitchItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5597,8 +5597,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Test_Mat3
-  Title: Test (Mat) - 3
-  Description: "Test 3 - \xC0 d\xE9velopper..."
+  Title: Test (Mat) 3 -> SwitchItem
+  Description: "\xC9cran permettant de switcher d'item rapidement avec le DPad."
 --- !u!114 &2109911126
 MonoBehaviour:
   m_ObjectHideFlags: 0

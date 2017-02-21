@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/* Février 2017
+ * Auteur: Mathieu Tremblay
+ * 
+ * Ce qu'il y a à améliorer:
+ *   -> Le controlleur d'Item devrait s'occuper de contrôler tous ce qui a rapport à l'affichage du menu et à l'intéraction du joueur.
+ *   -> C'est le GameManager qui devrait savoir quels items le joueur a en sa possession, mais c'est le Controlleur qui devrait savoir quels sont les items.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
